@@ -55,7 +55,5 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      
-      # Apply only runs automatically on push to main (i.e. after PR merge)
       - name: Terraform Apply
         run: terraform apply -auto-approve 
