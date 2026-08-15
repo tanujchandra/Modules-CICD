@@ -51,13 +51,11 @@ jobs:
         id: validate
         run: terraform validate
 
+       # Create Execution Plan
       - name: Terraform Plan
-        id: plan
-        
-        continue-on-error: true
+        run: terraform plan
 
       
       # Apply only runs automatically on push to main (i.e. after PR merge)
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve tfplan
