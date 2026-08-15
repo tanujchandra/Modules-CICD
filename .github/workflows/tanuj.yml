@@ -27,7 +27,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ${{ env.TF_WORKING_DIR }}
+        working-directory: ${{ Dev_WORKING_DIR }}
 
     steps:
       - name: Checkout repository
